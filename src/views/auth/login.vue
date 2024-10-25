@@ -7,7 +7,7 @@
       <div class="login-form">
         <Form inline>
           <FormItem :prop="key" v-for="(value, key, index) in formData">
-            <Input :name="key" v-model="formData[key]" ref="input" type="text"
+            <Input :name="key" :data="value" v-model="formData[key]" ref="input" type="text"
                    @on-change="handleLogin($event, key, index)" size="large"/>
           </FormItem>
         </Form>
